@@ -1,0 +1,171 @@
+:root {
+  /* Primary Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutrals */
+  --paragraph-trans: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --fc-white: #fff;
+
+  /* Texts */
+
+  --font-size: 0.8rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --ff-lexan: "Lexend Deca", Sans-serif;
+  --ff-Big: "Big Shoulders Display", coursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #efefef;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  /* height: 100vh; */
+  margin: 2rem auto;
+}
+
+.card {
+  width: 16rem;
+  padding: 1.5rem 2.5rem;
+}
+
+/* .card img {
+  width: 30%;
+} */
+
+.card h1 {
+  font-family: var(--ff-Big);
+  font-weight: var(--fw-bold);
+  color: var(--fc-white);
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-family: var(--ff-lexan);
+  font-weight: var(--fw-regular);
+  color: var(--paragraph-trans);
+  font-size: var(--font-size);
+  width: 70%;
+  padding-bottom: 2rem;
+}
+
+.card button {
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  border: none;
+  font-family: var(--ff-lexan);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* CSS FOR CUSTOMS SEPARATED DIVS */
+#sedan button {
+  color: var(--bright-orange);
+}
+
+#sedan {
+  background: var(--bright-orange);
+  border-radius: 1rem 1rem 0 0;
+  animation: dropdown 700ms backwards;
+  transition: 300ms;
+}
+
+#sedan:hover {
+  transform: translateY(-15px);
+}
+
+#suv button {
+  color: var(--dark-cyan);
+}
+
+#suv {
+  background: var(--dark-cyan);
+  animation: dropdown 700ms 200ms backwards;
+  transition: 300ms;
+}
+
+#suv:hover {
+  transform: translateX(-15px);
+}
+
+#luxury button {
+  color: var(--very-dark-cyan);
+}
+
+#luxury {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0 1rem 1rem;
+  animation: dropdown 700ms 400ms backwards;
+  transition: 300ms;
+}
+#luxury:hover {
+  transform: translateY(15px);
+}
+
+/* Media Queries */
+
+@media (min-width: 1150px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
+    height: 100vh;
+    margin: 1rem auto;
+  }
+
+  #sedan {
+    border-radius: 1rem 0 0 1rem;
+    transition: 300ms;
+  }
+
+  #sedan:hover {
+    transform: translateY(-15px);
+  }
+
+  #suv {
+    transition: 300ms;
+  }
+
+  #suv:hover {
+    transform: translateY(-15px);
+  }
+
+  #luxury {
+    border-radius: 0 1rem 1rem 0;
+    transition: 300ms;
+  }
+
+  #luxury:hover {
+    transform: translateY(-15px);
+  }
+}
+
+/* KeyFrames */
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
