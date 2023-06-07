@@ -39,7 +39,7 @@ main {
 
 .card {
   width: 16rem;
-  padding: 1.5rem 2.5rem;
+  padding: 4rem 0 4rem 2rem;
 }
 
 /* .card img {
