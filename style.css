@@ -77,6 +77,12 @@ main {
   color: var(--bright-orange);
 }
 
+#sedan button:hover {
+  border: 1px solid white;
+  background: none;
+  color: white;
+}
+
 #sedan {
   background: var(--bright-orange);
   border-radius: 1rem 1rem 0 0;
@@ -92,6 +98,12 @@ main {
   color: var(--dark-cyan);
 }
 
+#suv button:hover {
+  border: 1px solid white;
+  background: none;
+  color: white;
+}
+
 #suv {
   background: var(--dark-cyan);
   animation: dropdown 700ms 200ms backwards;
@@ -104,6 +116,12 @@ main {
 
 #luxury button {
   color: var(--very-dark-cyan);
+}
+
+#luxury button:hover {
+  border: 1px solid white;
+  background: none;
+  color: white;
 }
 
 #luxury {
